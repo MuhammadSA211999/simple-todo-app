@@ -1,4 +1,4 @@
-import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, SELECTEDCOLOR } from "./actionTypes"
+import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, DELETED, SELECTEDCOLOR, TOGGLED } from "./actionTypes"
 
 export const addedTodo = (value) => {
     return {
@@ -13,11 +13,11 @@ export const completedAllTodo = (value) => {
 }
 export const toggledTodo = (todoId) => {
     return {
-        type: ADDED,
+        type: TOGGLED,
         payload: todoId
     }
 }
-export const selectedTodoColor = (id, color) => {
+export const selectTodoColor = (id, color) => {
     return {
         type: SELECTEDCOLOR,
         payload: { color, id }
@@ -25,7 +25,7 @@ export const selectedTodoColor = (id, color) => {
 }
 export const deletedTodo = (id) => {
     return {
-        type: ADDED,
+        type: DELETED,
         payload: id
     }
 }
