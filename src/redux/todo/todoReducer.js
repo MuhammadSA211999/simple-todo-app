@@ -13,7 +13,8 @@ const todoReducer = (state = initialSatate, action) => {
                 ...state,
                 {
                     id: nextTodoId(state),
-                    ...action.payload
+                    text: action.payload,
+                    completed: false
                 }
             ]
         case TOGGLED:
