@@ -11,7 +11,7 @@ const filterReducer = (state = initialSatate, action) => {
         case COLORCHANGED:
             const { color, changeType } = action.payload
             switch (changeType) {
-                case 'added':
+                case 'add':
                     return {
                         ...state,
                         colors: [...state.colors, color]
