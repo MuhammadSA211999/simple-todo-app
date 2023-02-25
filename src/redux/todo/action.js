@@ -11,12 +11,10 @@ export const completedAllTodo = (value) => {
         type: ALLCOMPLETED,
     }
 }
-export const toggledTodo = (todoId, value) => {
+export const toggledTodo = (todoId) => {
     return {
         type: ADDED,
-        payload: {
-            value, todoId
-        }
+        payload: todoId
     }
 }
 export const selectedTodoColor = (id, color) => {
@@ -31,9 +29,8 @@ export const deletedTodo = (id) => {
         payload: id
     }
 }
-export const clearCompleted = (value, status) => {
+export const clearCompleted = () => {
     return {
         type: CLEARCOMPLETED,
-        payload: status
     }
 }
